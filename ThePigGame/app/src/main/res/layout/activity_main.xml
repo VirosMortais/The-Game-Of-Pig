@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player1View"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.316" />
+
+    <TextView
+        android:id="@+id/player1Contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numberZero"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/player1"
+        app:layout_constraintStart_toStartOf="@+id/player1"
+        app:layout_constraintTop_toTopOf="@+id/player2Contador"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/player2Contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="408dp"
+        android:text="@string/numberZero"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/player2"
+        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintStart_toStartOf="@+id/player2"
+        app:layout_constraintTop_toBottomOf="@+id/player2"
+        app:layout_constraintVertical_bias="0.764" />
+
+    <TextView
+        android:id="@+id/player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player2View"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.316" />
+
+    <Button
+        android:id="@+id/rollDiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:text="@string/rollDiceNameButton"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.781" />
+
+    <Button
+        android:id="@+id/newGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:text="@string/newGameNameButton"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.117" />
+
+    <Button
+        android:id="@+id/holdButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:text="@string/holdNameButton"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollDiceButton"
+        app:layout_constraintVertical_bias="0.257" />
+
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:background="@color/pink"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/player2Contador"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@id/player2Contador"
+        app:layout_constraintTop_toTopOf="@id/player2Contador"
+        app:layout_constraintVertical_bias="0.238">
+
+
+    <TextView
+        android:id="@+id/currentPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/currentValue"
+        android:textColor="@color/black_222"
+        android:textSize="16sp"
+        android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/currentValuePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/numberZero"
+            android:textColor="@color/black_222"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:background="@color/pink"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/player1Contador"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@id/player1Contador"
+        app:layout_constraintTop_toTopOf="@id/player1Contador"
+        app:layout_constraintVertical_bias="0.238">
+
+        <TextView
+            android:id="@+id/currentPlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/currentValue"
+            android:textColor="@color/black_222"
+            android:textSize="16sp"
+             />
+
+        <TextView
+            android:id="@+id/currentValuePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/pink"
+            android:gravity="center"
+            android:text="@string/numberZero"
+            android:textColor="@color/black_222"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/winner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/winMessage"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toTopOf="@+id/player1"
+        app:layout_constraintEnd_toEndOf="@+id/player1"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/player1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783" />
+
+    <TextView
+        android:id="@+id/winner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/winMessage"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toTopOf="@+id/player2"
+        app:layout_constraintEnd_toEndOf="@+id/player2"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/player2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783" />
+
+    <TextView
+        android:id="@+id/gameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titleGame"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/newGameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
